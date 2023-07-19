@@ -12,16 +12,47 @@ const validAge = 18;
 const validWeight = 30;
 const validHeight = 100;
 
+const numberInputs = $_(".number");
+const errorMessages = $_(".error-message");
+
+numberInputs.forEach((input, i) => {
+  input.addEventListener("input", () => {
+    if (!input.value) {
+      errorMessages[i].textContent = "Harap isi nilai ini.";
+    } else if (i === 0 && input.value < validWeight) {
+      errorMessages[i].textContent =
+        "Tidak memenuhi nilai minimum yaitu " + validWeight + " kg";
+    } else if (i === 1 && input.value < validAge) {
+      errorMessages[i].textContent =
+        "Tidak memenuhi nilai minimum yaitu " + validAge + " tahun";
+    } else if (i === 2 && input.value < validHeight) {
+      errorMessages[i].textContent =
+        "Tidak memenuhi nilai minimum yaitu " + validHeight + " cm";
+    } else {
+      errorMessages[i].textContent = ""; // Clear error message if input is valid
+    }
+  });
+});
+
 function validation() {
+  let isFormValid = true;
   $_("input").forEach((input) => {
     if (input.checked === false && input.value === "") {
       $(".warning").textContent = "*Semua kolom wajib diisi";
-      return false;
-    } else {
-      $(".warning").textContent = "Berhasil!";
-      return true;
+      isFormValid = false;
+    } else if (input.checked === false && input.value !== "") {
+      $(".warning").textContent = "*Semua kolom wajib diisi";
+      isFormValid = false;
+    } else if (input.checked === true && input.value === "") {
+      $(".warning").textContent = "*Semua kolom wajib diisi";
+      isFormValid = false;
+    } else if (input.checked === true && input.value !== "") {
+      $(".warning").textContent = "Berhasil";
+      isFormValid = true;
     }
   });
+
+  return isFormValid;
 }
 
 $("#button-submit").addEventListener("click", async () => {
@@ -35,6 +66,16 @@ $("#button-reset").addEventListener("click", async () => {
   });
 
   $(".warning").textContent = "";
+
+  const buttonReset = document.getElementById("button-reset");
+
+  // Tambahkan event listener pada tombol reset
+  buttonReset.addEventListener("click", () => {
+    // Loop melalui semua elemen dengan kelas .error-message dan hapus pesan peringatan
+    errorMessages.forEach((errorMessage) => {
+      errorMessage.textContent = "";
+    });
+  });
 });
 
 // $("#button-submit").addEventListener("click", () => {

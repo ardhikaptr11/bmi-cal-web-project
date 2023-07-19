@@ -176,6 +176,14 @@ label {
   padding: 15px 10px;
 }
 
+.error-message {
+  color: rgb(255, 0, 0);
+  margin-left: 15px;
+  padding-top: 0.3rem;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
 input {
   background-color: transparent;
   position: relative;
