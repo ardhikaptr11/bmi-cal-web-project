@@ -20,7 +20,6 @@ body {
   height: 100%;
   margin: 10px 10px;
   font-family: Poppins, sans-serif;
-  min-height: 3000px;
 }
 
 .banner {
@@ -198,13 +197,13 @@ input {
 #button-submit,
 #button-reset {
   background-color: rgb(60, 197, 176);
+  color: #fff;
   position: relative;
   margin-top: 35px;
   margin-left: 15px;
   margin-bottom: 20px;
   padding: 20px;
   border: none;
-  color: #fff;
   border-radius: 8px;
   text-align: center;
   display: inline-block;
@@ -216,7 +215,6 @@ input {
 
 #button-reset {
   background-color: tomato;
-  color: #fff;
   margin-left: 2px;
 }
 
@@ -228,8 +226,8 @@ input {
 
 #button-submit:hover {
   background-color: transparent;
-  border: 1px solid rgb(60, 197, 176);
   color: rgb(60, 197, 176);
+  border: 1px solid rgb(60, 197, 176);
 }
 
 .required .warning {
@@ -238,10 +236,6 @@ input {
   padding-top: 0.5rem;
   font-weight: 400;
 }
-
-/* .form .form-button .cta {
-    color: #fff;
-} */
 
 ol {
   list-style-type: decimal;
@@ -274,16 +268,131 @@ ol {
 
 section {
   background-color: rgb(242, 243, 245);
-  width: 100%;
-  height: 500px;
+  height: auto;
   margin-top: 3rem;
 }
 
 section h3 {
   font-family: custom-font, Poppins, sans-serif;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #0f0f0f;
   text-align: center;
-  padding: 1.7rem 0;
+  margin-bottom: 1rem;
+}
+
+#res {
+  border-radius: 10px;
+}
+
+#res .box {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: inherit;
+}
+
+#res .result {
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#res .result #sum-head {
+  color: rgb(102, 102, 102);
+  font-size: 1.8rem;
+}
+
+#res .result .bot {
+  font-size: 16px;
+}
+
+#res .result #num {
+  color: #59e023;
+  color: #e2c000;
+  color: #dd2a36;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+#res .result #sum-info {
+  color: #0f0f0f;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#res .result #sum-sums {
+  font-size: 1rem;
+  color: rgb(102, 102, 102);
+}
+
+.effect h3 {
+  font-family: custom-font, Poppins, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f0f0f;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 0;
+}
+
+.li-disease {
+  list-style-type: none;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(102, 102, 102);
+}
+
+.disclaimer p {
+  text-align: justify;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.disclaimer p span {
+  font-weight: bold;
+}
+
+.go-to {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.go-to a {
+  background-color: rgb(91, 192, 222);
+  color: #fff;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 10px;
+}
+
+.download-link {
+  margin: 3rem;
+}
+
+.download-link h5 {
+  text-align: center;
+  font-family: Poppins, sans-serif;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img-container .img-google img {
+  max-width: 200px;
+  height: auto;
+}
+
+.img-container .img-apple img {
+  width: 165px;
+  /* height: auto; */
 }

@@ -11,6 +11,7 @@
     />
   </head>
   <body>
+    <!-- Banner section start -->
     <div class="banner">
       <div class="title-desc">
         <h1>Kalkulator BMI</h1>
@@ -22,10 +23,14 @@
         </p>
       </div>
     </div>
+    <!-- Banner section end -->
 
+    <!-- Main body start -->
     <main>
+      <!-- Input data start -->
       <div class="form">
         <h2 id="gender">Jenis Kelamin</h2>
+        <!-- Radio button container start -->
         <div class="radio-button">
           <label class="gender">
             <input type="radio" class="radio" id="male" name="gender" />
@@ -40,8 +45,11 @@
             <span></span>
           </label>
         </div>
+        <!-- Radio button container start -->
 
+        <!-- User form input start -->
         <form>
+          <!-- Weight data input start -->
           <h2>Berat Badan</h2>
           <label for="weight"> Berat Badan (kg)</label>
           <div class="input-wrapper">
@@ -56,7 +64,9 @@
             <div class="suffix">kg</div>
           </div>
           <div class="error-message"></div>
+          <!-- Weight data input start -->
 
+          <!-- Age data input start -->
           <h2>Usia</h2>
           <label for="age">Usia (tahun)</label>
           <div class="input-wrapper">
@@ -71,6 +81,9 @@
             <div class="suffix">tahun</div>
           </div>
           <div class="error-message"></div>
+          <!-- Age data input end -->
+
+          <!-- Height data input start -->
           <h2>Tinggi Badan</h2>
           <label for="height">Tinggi Badan (cm)</label>
           <div class="input-wrapper">
@@ -85,18 +98,28 @@
             <div class="suffix">cm</div>
           </div>
           <div class="error-message"></div>
+          <!-- Height data input start -->
         </form>
+        <!-- User form input end -->
 
+        <!-- User warning start-->
         <div class="required">
           <h5 class="warning"></h5>
         </div>
+        <!-- User warning end-->
 
+        <!-- Button start -->
         <div class="form-button">
-          <button id="button-submit">Hitung BMI</button>
+          <button id="button-submit">
+            Hitung BMI <a href="#res" class="cta"></a>
+          </button>
           <button id="button-reset">Reset</button>
         </div>
+        <!-- Button end -->
       </div>
+      <!-- Input data end -->
 
+      <!-- Description section start -->
       <div class="description">
         <h3>Keunggulan fitur</h3>
         <ol>
@@ -118,13 +141,16 @@
           Anda (dalam meter) atau BMI = Kg/Ms<sup>2</sup>.
         </p>
       </div>
+      <!-- Description section start -->
 
+      <!-- Display section start -->
       <section id="res">
         <div class="box">
+          <!-- Result displat start -->
           <h3>Hasil</h3>
           <div class="result">
             <div class="top">
-              <span id="sum-head"></span>
+              <span id="sum-head">Belum ada Hasil</span>
               <br />
               <span id="sum-info"></span>
             </div>
@@ -142,11 +168,69 @@
               <span id="sum-type"></span>
               <span id="sum-avgs"></span>
               <span id="sum-unit"></span>
+              <br />
+              <span id="suggestion"></span>
             </div>
           </div>
+          <!-- Result display end -->
+
+          <!-- Additional part start -->
+          <div class="additional">
+            <div class="disclaimer">
+              <p>
+                <span>DISCLAIMER: </span>BMI tidak sepenuhnya mewakili
+                diagnosisi menyeluruh dari kesehatan tubuh dan resiko penyakit
+                seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko
+                dan kekhawatiran Anda terkait dengan berat badan Anda
+              </p>
+            </div>
+
+            <div class="effect">
+              <h3>Beberapa penyakit yang bisa disebabkan akibat kegemukan</h3>
+              <ul class="disease">
+                <li class="li-disease">Diabetes</li>
+                <li class="li-disease">Hipertensi</li>
+                <li class="li-disease">Sakit Jantung</li>
+                <li class="li-disease">Osteoarthritis</li>
+              </ul>
+            </div>
+
+            <div class="go-to">
+              <a
+                href="https://www.alodokter.com/?gclid=CjwKCAjwtuOlBhBREiwA7agf1vSSogAII97ROMKjyWN31FHEuoN8YkvgFy3tRVdctiEL6CLJxNo-MxoCdVwQAvD_BwE"
+                >Konsultasi Dokter via Aplikasi</a
+              >
+              <a
+                href="https://www.alodokter.com/?gclid=CjwKCAjwtuOlBhBREiwA7agf1vSSogAII97ROMKjyWN31FHEuoN8YkvgFy3tRVdctiEL6CLJxNo-MxoCdVwQAvD_BwE"
+                >Registrasi Online Sekarang</a
+              >
+            </div>
+
+            <div class="download-link">
+              <h5>Download Sekarang di</h5>
+              <div class="img-container">
+                <div class="img-google">
+                  <img
+                    src="./resources/google-play.png"
+                    alt="Download now - Google Play"
+                  />
+                </div>
+                <div class="img-apple">
+                  <img
+                    src="./resources/app-store.png"
+                    alt="Download now - App Store"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Additional part end -->
         </div>
       </section>
+      <!-- Display section end -->
     </main>
+    <!-- Main body end -->
+    <!-- Javascript source -->
     <script src="./js/script.js"></script>
   </body>
 </html>
